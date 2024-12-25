@@ -1,0 +1,42 @@
+xây dụng chức năng quản lí người dùng
+
+phần 1: xác thực truy cập
+
+-đăng nhập
+-đăng ký
+-đăng xuất
+-quên mật khẩu
+-kích hoạt tài khoản
+
+phần 2: quản lí người dùng
+
+-kiển tra người dùng đăng nhập
+-thêm người mới
+-sửa xóa người dùng
+-hiển thị số user
+-phân trang
+-tìm kiếm
+-lọc dữ liệu
+
+thiết kế database
+
+-bảng user  
+    id - primary key (int)
+    fullname - (varchar(50))
+    email - (varchar(50))
+    phone - (varchar(15))
+    password - (varchar(50))
+    fogottoken - (varchar(50))
+    activetoken - (varchar(50))
+    create_at - (datetime)
+    update_at - (datetime)
+
+-bảng logintoken
+    id - primary key (int)
+    user_ID - (int)
+    token varchar(50)
+
+-code chức năng đăng kí tài khoản
+     Đăng ký (đăng ký và insert dữ liệu vào bảng users)
+     Gửi mail và kích hoạt tài khoản người dùng
+     Người dùng bấm vào link kích hoạt tìa khoản(Mã OTP)
